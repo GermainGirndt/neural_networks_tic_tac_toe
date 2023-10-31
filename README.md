@@ -35,8 +35,13 @@ source venv/bin/activate
 - Matches
   Can be X (0) or Y (1)
 
+- Position
+  X and Y: 0, 1 or 2
+
 - Tile
+  Receive a match
   Can be empty or filled
+  Must have a position
 
 - Board
   Has the tiles in a 3x3 space
