@@ -45,11 +45,16 @@ source venv/bin/activate
 
 - Board
   Has the tiles in a 3x3 space
-  Displays which tiles are empty
-
-- Players
-  Place a match into a board's tile
+  All tiles are empty at start
+  Displays all tiles
 
 - Judge
+  Checks who should play now
+  Receive orders from players
+  Checks if the move is valid
   Checks if the game has ended
   Check if any player won
+
+- Players (2)
+  Either X or O
+  Place a match into a board's tile
