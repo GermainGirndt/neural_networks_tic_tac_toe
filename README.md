@@ -46,6 +46,9 @@ source venv/bin/activate
 - Position
   X and Y: 0, 1 or 2
 
+- BoardPosition
+  X and Y: 0, 1 or 2
+
 - Tile
   Receive a match
   Can be empty or filled
@@ -56,13 +59,16 @@ source venv/bin/activate
   All tiles are empty at start
   Displays all tiles
 
-- Judge
-  Checks who should play now
-  Receive orders from players
-  Checks if the move is valid
-  Checks if the game has ended
-  Check if any player won
+- Move
+  Has the Match which should be placed and it's position
 
 - Players (2)
   Either X or O
   Place a match into a board's tile
+
+- GameManager
+  Checks which player should play now
+  Receive moves from players
+  Checks if the move is valid
+  Checks if the game has ended
+  Check if any player won
