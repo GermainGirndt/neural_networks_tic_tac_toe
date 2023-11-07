@@ -1,3 +1,11 @@
+### Python PATH
+
+Add the project root directory to the python path
+
+```
+export PYTHONPATH="$( pwd )"
+```
+
 ### Versions
 
 ```

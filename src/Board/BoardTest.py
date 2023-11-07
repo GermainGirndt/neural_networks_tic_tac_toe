@@ -1,7 +1,5 @@
-from Tile import Tile
-from BoardPosition import BoardPosition
-from Match import Match, MatchType
-from Board import Board
+from src.Board.BoardPosition import BoardPosition
+from src.Board.Board import Board
 import pytest
 
 

@@ -1,6 +1,5 @@
-from Match import Match
-from BoardPosition import BoardPosition
-from Tile import Tile
+from src.Board.BoardPosition import BoardPosition
+from src.Tile.Tile import Tile
 
 
 class Board():

@@ -1,4 +1,6 @@
-from Position import Position
+
+
+from src.Position.Position import Position
 
 
 class BoardPosition(Position):

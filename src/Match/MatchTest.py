@@ -1,5 +1,5 @@
 import pytest
-from Match import Match, MatchType
+from src.Match.Match import Match, MatchType
 
 
 def test_create_match_with_no_arguments_throws_error():

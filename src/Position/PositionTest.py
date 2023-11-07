@@ -1,5 +1,5 @@
 import pytest
-from Position import Position
+from src.Position.Position import Position
 
 
 def test_can_create_position_with_x_and_y_equals_zero():
