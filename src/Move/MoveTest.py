@@ -36,3 +36,7 @@ def test_cannot_execute_the_same_move_two_times():
     move.execute()
     with pytest.raises(RuntimeError):
         move.execute()
+
+# TODO: cannot create a move if the board tile is already filled
+
+# TODO: cannot execute a move if the board tile is already filled
