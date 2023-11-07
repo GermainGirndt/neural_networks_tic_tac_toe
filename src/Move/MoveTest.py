@@ -37,6 +37,28 @@ def test_cannot_execute_the_same_move_two_times():
     with pytest.raises(RuntimeError):
         move.execute()
 
-# TODO: cannot create a move if the board tile is already filled
 
-# TODO: cannot execute a move if the board tile is already filled
+def test_cannot_create_a_move_if_the_board_tile_is_already_filled():
+    checker = Checker(CheckerType.O)
+    position = BoardPosition(0, 0)
+    board = Board()
+    move = Move(checker=checker, position=position, board=board)
+    move.execute()
+
+    another_checker = Checker(CheckerType.X)
+    with pytest.raises(RuntimeError):
+        Move(checker=another_checker, position=position, board=board)
+
+
+def test_cannot_execute_move_if_the_board_tile_is_already_filled():
+    checker = Checker(CheckerType.O)
+    another_checker = Checker(CheckerType.X)
+    position = BoardPosition(0, 0)
+    board = Board()
+    move = Move(checker=checker, position=position, board=board)
+    another_move = Move(checker=another_checker,
+                        position=position, board=board)
+
+    move.execute()
+    with pytest.raises(RuntimeError):
+        another_move.execute()
