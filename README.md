@@ -40,7 +40,7 @@ source venv/bin/activate
 
 - A tic tac toe game has:
 
-- Matches
+- Checkers
   Can be X (0) or Y (1)
 
 - Position
@@ -50,7 +50,7 @@ source venv/bin/activate
   X and Y: 0, 1 or 2
 
 - Tile
-  Receive a match
+  Receive a checker
   Can be empty or filled
   Must have a position
 
@@ -60,11 +60,11 @@ source venv/bin/activate
   Displays all tiles
 
 - Move
-  Has the Match which should be placed and it's position
+  Has the Checker which should be placed and it's position
 
 - Players (2)
   Either X or O
-  Place a match into a board's tile
+  Place a checker into a board's tile
 
 - GameManager
   Checks which player should play now

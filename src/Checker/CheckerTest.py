@@ -1,37 +1,37 @@
 import pytest
-from src.Match.Match import Match, MatchType
+from src.Checker.Checker import Checker, CheckerType
 
 
 def test_create_match_with_no_arguments_throws_error():
     with pytest.raises(TypeError):
-        Match()
+        Checker()
 
 
 def test_can_create_match_with_O():
-    match = Match(MatchType.O)
-    assert match is not None
+    checker = Checker(CheckerType.O)
+    assert checker is not None
 
 
 def test_can_create_match_with_X():
-    match = Match(MatchType.O)
-    assert match is not None
+    checker = Checker(CheckerType.O)
+    assert checker is not None
 
 
 def test_create_match_with_string_throws_error():
     with pytest.raises(TypeError):
-        Match("string")
+        Checker("string")
 
 
 def test_create_match_with_number_throws_error():
     with pytest.raises(TypeError):
-        Match(1)
+        Checker(1)
 
 
 def test_get_type_for_match_with_O_returns_O():
-    match = Match(MatchType.O)
-    assert match.get_type() == MatchType.O
+    checker = Checker(CheckerType.O)
+    assert checker.get_type() == CheckerType.O
 
 
 def test_get_type_for_match_with_X_returns_X():
-    match = Match(MatchType.X)
-    assert match.get_type() == MatchType.X
+    checker = Checker(CheckerType.X)
+    assert checker.get_type() == CheckerType.X
