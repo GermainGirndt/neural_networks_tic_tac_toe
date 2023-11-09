@@ -7,7 +7,7 @@ class Tile():
     board_position: type[BoardPosition] = None
     checker: type[Checker] = None
 
-    def __init__(self, board_position) -> None:
+    def __init__(self, board_position):
         if type(board_position) != BoardPosition:
             raise TypeError(
                 f"Tile: board_position must be a Position. Received: {type(board_position)} - {board_position}")
