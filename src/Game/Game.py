@@ -55,3 +55,18 @@ class Game():
             raise RuntimeError("Game has not started yet")
 
         return self.next_player
+
+    def end_turn(self, player: type[Player]):
+
+        if self.game_state == GameState.NOT_STARTED:
+            raise RuntimeError("Game has not started yet")
+
+        if player not in [self.player_one, self.player_two]:
+            raise RuntimeError(
+                f"Game: player must be one of the game players. Received: {player}")
+
+        if player != self.next_player:
+            raise RuntimeError(
+                f"Game: Cannot end if it isn't this players turn. Received: {player}")
+
+        self.next_player = self.player_one if self.next_player == self.player_two else self.player_two

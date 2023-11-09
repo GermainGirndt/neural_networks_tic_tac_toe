@@ -85,3 +85,51 @@ def test_start_game_should_return_first_player_correctly_after_game_has_been_sta
 
     game.start(player_x)
     assert game.get_next_player() is player_x
+
+
+def test_end_turn_should_thow_an_error_if_game_has_not_started_yet():
+    player_x = Player(CheckerType.X)
+    player_o = Player(CheckerType.O)
+    board = Board()
+    game = Game(board, player_x, player_o)
+
+    with pytest.raises(RuntimeError):
+        game.end_turn(player_x)
+
+
+def test_end_turn_should_thow_an_error_if_players_is_not_playing():
+    player_x = Player(CheckerType.X)
+    player_o = Player(CheckerType.O)
+    board = Board()
+    game = Game(board, player_x, player_o)
+    game.start(player_x)
+
+    player_not_playing = Player(CheckerType.O)
+
+    with pytest.raises(RuntimeError):
+        game.end_turn(player_not_playing)
+
+
+def test_end_turn_should_thow_an_error_if_it_is_not_players_turn():
+    player_x = Player(CheckerType.X)
+    player_o = Player(CheckerType.O)
+    board = Board()
+    game = Game(board, player_x, player_o)
+    game.start(player_x)
+
+    with pytest.raises(RuntimeError):
+        game.end_turn(player_o)
+
+
+def test_end_turn_should_change_next_player_if_the_game_has_started():
+    player_x = Player(CheckerType.X)
+    player_o = Player(CheckerType.O)
+    board = Board()
+    game = Game(board, player_x, player_o)
+    game.start(player_x)
+
+    assert game.get_next_player() is player_x
+    game.end_turn(player_x)
+    assert game.get_next_player() is player_o
+    game.end_turn(player_o)
+    assert game.get_next_player() is player_x
