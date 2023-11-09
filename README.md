@@ -21,7 +21,7 @@ pip 23.2.1 from ..../neural_networks_tic_tac_toe/venv/lib/python3.11/site-packag
 ### Execute tests
 
 ```
-pytest
+pytest src/**/*Test.py
 ```
 
 ### Create venv
