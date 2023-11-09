@@ -64,11 +64,9 @@ source venv/bin/activate
 
 - Players (2)
   Either X or O
-  Place a checker into a board's tile
+  Should make a move
 
 - GameManager
   Checks which player should play now
-  Receive moves from players
-  Checks if the move is valid
   Checks if the game has ended
   Check if any player won
